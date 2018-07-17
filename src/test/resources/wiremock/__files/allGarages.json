@@ -1,0 +1,9 @@
+{
+  "response" : {
+    "name":"Bavaria Park Garage GmbH",
+    "info":{
+      "slots":150,
+      "status":"open"
+    }
+  }
+}

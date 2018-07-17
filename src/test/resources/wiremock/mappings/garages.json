@@ -1,0 +1,10 @@
+{
+  "request" : {
+    "url" : "/rest-garage-sample/garage",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "allGarages.json"
+  }
+}
