@@ -12,7 +12,7 @@ public class BaseTest {
     public static void setUp() {
         String port = System.getProperty("server.port");
         if (port == null) {
-            RestAssured.port = Integer.valueOf(8080);
+            RestAssured.port = RestAssured.DEFAULT_PORT;
         } else {
             RestAssured.port = Integer.valueOf(port);
         }
