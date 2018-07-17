@@ -3,19 +3,15 @@ apply plugin: 'intellij'
 
 sourceCompatibility = '1.8'
 
-// In this section you declare where to find the dependencies of your project
 repositories {
     mavenCentral()
     jcenter()
 }
 
 dependencies {
-    // This dependency is found on compile classpath of this component and consumers.
-    compile 'com.google.guava:guava:23.0'
-
-    // Use JUnit test framework
     testCompile 'junit:junit:4.12'
     testCompile group: 'com.jayway.restassured', name: 'rest-assured', version: '2.9.0'
-
+    testCompile group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
 }
 
