@@ -27,6 +27,7 @@ public class BaseTest {
         if (baseURI == null) {
             baseURI = "http://localhost";
         }
-        RestAssured.baseURI = baseURI;
+
+        System.out.println(String.format("server.port: %s, server.base: %s, server.host: %s", port, basePath, baseURI));
     }
 }
