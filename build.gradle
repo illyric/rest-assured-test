@@ -8,6 +8,14 @@ repositories {
     jcenter()
 }
 
+test {
+    // enable passing command line args, ex: -Dserver.port=8081 (https://issues.gradle.org/browse/GRADLE-1185)
+    systemProperties = System.properties
+
+    // enable logging to console when running tests. Apparently it is not enabled by default
+    testLogging.showStandardStreams = true
+}
+
 dependencies {
     testCompile 'junit:junit:4.12'
     testCompile group: 'com.jayway.restassured', name: 'rest-assured', version: '2.9.0'
