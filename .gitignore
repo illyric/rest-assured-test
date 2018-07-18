@@ -32,3 +32,7 @@ gradle-app.setting
 *.zip
 *.tar.gz
 *.rar
+
+# Dependency directories
+node_modules/
+jspm_packages/

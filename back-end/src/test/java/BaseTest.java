@@ -1,6 +1,5 @@
-import org.junit.BeforeClass;
-
 import com.jayway.restassured.RestAssured;
+import org.junit.BeforeClass;
 
 public class BaseTest {
     // sets up RestAssured with a default target of "http://localhost:8080/rest-garage-sample"

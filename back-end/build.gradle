@@ -1,15 +1,10 @@
+version '1.0'
+
 apply plugin: 'java'
 apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
-
-repositories {
-    mavenCentral()
-    jcenter()
-}
 
 test {
     // enable passing command line args, ex: -Dserver.port=8081 (https://issues.gradle.org/browse/GRADLE-1185)
@@ -18,6 +13,11 @@ test {
     // enable logging to console when running tests. Apparently it is not enabled by default
     testLogging.showStandardStreams = true
 }
+
+repositories {
+    mavenCentral()
+}
+
 
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.3.RELEASE'
@@ -28,4 +28,3 @@ dependencies {
     testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
     testCompile "com.github.tomakehurst:wiremock-standalone:2.18.0"
 }
-
