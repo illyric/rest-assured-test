@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import {Http} from "@angular/http";
+import {environment} from "../environments/environment";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ export class AppComponent {
 
   private sayHello(): void {
     this.result = 'loading...';
-    this.http.get('http://localhost:8080/rest-garage-sample/garage')
+    this.http.get(environment.host + '/rest-garage-sample/garage')
       .subscribe(resp => this.result = resp.text());
   }
 }
