@@ -2,10 +2,22 @@ server:
   port: 8080
   address: localhost
   connection-timeout: 5000
+  servlet:
+    context-path: /rest-garage-sample
 spring:
   application:
     name: 'Rest Assured Test'
-  data:
-    jpa:
-      repositories:
-        enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username:
+    password:
+    schema: classpath:/schema.sql
+    data: classpath:/data.sql
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    database: H2
+    open-in-view: true
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update

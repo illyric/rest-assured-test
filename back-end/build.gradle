@@ -30,6 +30,7 @@ repositories {
 
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-web:${springBootVer}"
+    compile "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVer}"
 
     testCompile "junit:junit:${junitVer}"
     testCompile "com.jayway.restassured:rest-assured:${restAssuredVer}"
