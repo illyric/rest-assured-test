@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class GarageController {
-    @RequestMapping("/rest-garage-sample/garage")
+    @RequestMapping("/garage")
     public Garage garage() {
         final Info info = new Info(150, "open");
         final Garage garage = new Garage("Bavaria Park Garage GmbH", info);
