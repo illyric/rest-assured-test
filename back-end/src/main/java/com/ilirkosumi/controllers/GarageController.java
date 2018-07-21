@@ -1,16 +1,21 @@
 package com.ilirkosumi.controllers;
 
 import com.ilirkosumi.domain.Garage;
-import com.ilirkosumi.domain.Info;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.ilirkosumi.domain.repository.GarageRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class GarageController {
-    @RequestMapping("/garage")
-    public Garage garage() {
-        final Info info = new Info(150, "open");
-        final Garage garage = new Garage("Bavaria Park Garage GmbH", info);
-        return garage;
+
+    @Autowired
+    private GarageRepository garageRepository;
+
+    @GetMapping("/garage")
+    public List<Garage> getGarage() {
+        return garageRepository.findAll();
     }
 }
