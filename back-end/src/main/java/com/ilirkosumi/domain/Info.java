@@ -1,15 +1,41 @@
 package com.ilirkosumi.domain;
 
-public class Info {
-    private final int slots;
-    private final String status;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
-    public Info(int slots, String status) {
+@Entity
+@Table(name = "info")
+public class Info {
+    @Id
+    @GeneratedValue
+    private Long Id;
+
+    @NotNull
+    private Integer slots;
+
+    @NotBlank
+    private String status;
+
+    public Info() {}
+
+    public Info(Integer slots, String status) {
         this.slots = slots;
         this.status = status;
     }
 
-    public int getSlots() {
+    public void setSlots(Integer slots) {
+        this.slots = slots;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Integer getSlots() {
         return slots;
     }
 

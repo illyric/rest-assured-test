@@ -5,6 +5,7 @@ plugins {
 
 ext {
     springBootVer = '2.0.3.RELEASE'
+    h2DbVer = '1.3.148'
     junitVer = '4.12'
     restAssuredVer = '2.9.0'
     gsonVer = '2.8.5'
@@ -37,4 +38,6 @@ dependencies {
     testCompile "com.google.code.gson:gson:${gsonVer}"
     testCompile "org.hamcrest:hamcrest-all:${hamcrestVer}"
     testCompile "com.github.tomakehurst:wiremock-standalone:${wiremockVer}"
+
+    runtime "com.h2database:h2:${h2DbVer}"
 }
