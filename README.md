@@ -1,7 +1,12 @@
-# rest-assured-test
-rest assured all the way!
+# spring-boot-demo
 
-using https://semaphoreci.com/community/tutorials/testing-rest-endpoints-using-rest-assured to learn rest assured
+using spring boot to learn all new kinds of stuff
+
+Rest-assured - https://semaphoreci.com/community/tutorials/testing-rest-endpoints-using-rest-assured
+
+Spring Boot Stack - https://www.callicoder.com/spring-boot-rest-api-tutorial-with-mysql-jpa-hibernate/
+
+Docker with spring boot -https://spring.io/guides/gs/spring-boot-docker/ to learn about dockerizing a spring boot app
 
 ## Sample REST application that deals with a garage. The garage has 150 spaces for cars. Its API can be summarized as follows:
 - GET call at /garage returns information of filled/free car parking slots,
