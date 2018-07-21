@@ -1,7 +1,9 @@
+package integration;
+
 import com.jayway.restassured.RestAssured;
 import org.junit.BeforeClass;
 
-public class BaseTest {
+public abstract class BaseTest {
     // sets up RestAssured with a default target of "http://localhost:8080/rest-garage-sample"
     // at the same time, allows to set a different web context using env. vars. ex.
     // gradle test -Dserver.port=8081 -Dserver.host=http://example.com
