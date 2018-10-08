@@ -36,3 +36,6 @@ gradle-app.setting
 # Dependency directories
 node_modules/
 jspm_packages/
+
+# Vagrant
+.vagrant/
